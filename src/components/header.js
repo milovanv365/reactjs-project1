@@ -26,7 +26,7 @@ const Header = () => {
                         </li>
                         <li>
                             <IconButton color="inherit" aria-label="Cart">
-                                <Link class="link-item" to={{ pathname: "/cart" }}>
+                                <Link className="link-item" to={{ pathname: "/cart" }}>
                                     <ShoppingBasketIcon />
                                 </Link>
                             </IconButton>
