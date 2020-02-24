@@ -4,13 +4,11 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-import styles from '../assests/styles/header.module.scss';
-
 
 const Header = () => {
     return (
         <header>
-            <nav className={styles.topNavBar}>
+            <nav className="top-nav-bar">
                 <div>
                     <IconButton color="inherit" aria-label="Menu">
                         <MenuIcon />

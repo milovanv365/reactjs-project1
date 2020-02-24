@@ -3,19 +3,18 @@ import Grid from '@material-ui/core/Grid';
 import { Link } from "react-router-dom";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt"
 
-import CustomLink from "../components/CustomLink";
 import CustomButton from "../components/CustomButton";
 
 import productOne from "../assests/images/product1.png";
 import productTwo from "../assests/images/product2.png";
-import contentImgTwo from "../assests/images/bg-home2.jpg"
-import contentImgThree from "../assests/images/bg-home3.png"
+import contentImgTwo from "../assests/images/bg-home2.jpg";
+import contentImgThree from "../assests/images/bg-home3.jpg";
 
 const Home = () => {
     return (
         <div className="main">
             <div className="content-slot-top">
-                <p className="text-x1">A Better Way to Listen</p>
+                <p className="heading-font1">A Better Way to Listen</p>
                 <div style={{marginTop: "calc(100vw * 0.5/27)"}}>
                     <CustomButton
                         label = "Watch the Video"
@@ -32,23 +31,14 @@ const Home = () => {
                         wordSpacing = ".6px"
                         textTransform = "none"
                     />
-                    <CustomLink
-                        content = "Learn more"
-                        pathName = "/learn-more"
-                        color = "#ffffff"
-                        fontSize = "1.2vw"
-                        lineHeight = "1.5"
-                        fontWeight = "400"
-                        letterSpacing = ".3px"
-                        wordSpacing = ".6px"
-                    />
+                    <Link to="/learn-more" className="custom-link1">Learn more</Link>
                 </div>
             </div>
             <div className="product-slot">
                 <Grid container>
                     <Grid container alignItems="flex-start" xs={12} sm={6} className="product-box1 item">
                         <Grid item xs={6}>
-                            <Link >
+                            <Link to="">
                                 <img src={productOne} alt="smart watch"/>
                             </Link>
                         </Grid>
@@ -102,14 +92,38 @@ const Home = () => {
                     <div className="left-block">Great sound in the great outdoors</div>
                     <div className="right-block">
                         <p>Get brilliant sound anywhere with the weatherproof and drop-resistant Move. Control with your voice, the Sonos app, and Apple AirPlay 2 at home, and stream via Bluetooth when WiFi isn't available.</p>
-                        <CustomLink
-                            content="Shop Move"
-                        />
+                        <Link class="custom-link2">Shop Move</Link>
                     </div>
                 </div>
             </div>
             <div className="content-slot-bottom">
-                <img src={contentImgThree} alt="" />
+                <Grid container alignItems="flex-start">
+                    <Grid item xs={4}>
+                        <p className="heading-font2">Why Choose Sonos</p>
+                        <div className="item-box">
+                            <Link className="custom-link3">Brilliant Sound</Link>
+                            <p>Enjoy clear, richly detailed sound that fills the room at any volume.</p>
+                            <div className="division"></div>
+                        </div>
+                        <div className="item-box">
+                            <Link className="custom-link3">Easy to Use</Link>
+                            <p>Setup takes minutes, and control is simple with the Sonos app, Apple AirPlay 2, and your voice.</p>
+                            <div className="division"></div>
+                        </div>
+                        <div className="item-box">
+                            <Link className="custom-link3">Listen Your Way</Link>
+                            <p>Customize your system and play what you want, where you want.</p>
+                            <div className="division"></div>
+                        </div>
+                        <div className="learn-more">
+                            <Link to="/learn-more" className="custom-link3">Learn more</Link>
+                        </div>
+                    </Grid>
+                    <Grid item xs={2}></Grid>
+                    <Grid item xs={6} >
+                        <img src={contentImgThree} alt="" />
+                    </Grid>
+                </Grid>
             </div>
         </div>
     )

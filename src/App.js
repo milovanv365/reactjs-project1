@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './assests/styles/style.scss';
 
-import Header from './components/header'
+import Header from './components/header';
+import Footer from './components/footer';
 import Home from './pages/home';
 import Shop from './pages/shop';
 import Cart from './pages/cart';
@@ -25,6 +26,7 @@ function App() {
                   <Home />
               </Route>
           </Switch>
+          <Footer>Footer</Footer>
       </Router>
   );
 }
