@@ -1,0 +1,118 @@
+@import "variables";
+
+.shop {
+  .carousel-product-slot {
+    ul {
+      li {
+        img {
+          width: $x6;
+        }
+      }
+    }
+  }
+  .brand-slot {
+    select {
+      border: 1px solid;
+      border-radius: 4px;
+      padding: 16px 68px 16px 15px;
+      background-image: url(https://assets.sonos.com/cdn_static/on/demandware.static/-/Library-Sites-SonosLibrary/default/dw823e0c90/images/icons/icon-caret.svg);
+      background-repeat: no-repeat;
+      background-size: auto 25%;
+      background-position: right 16px center;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    ul {
+      li.active {
+        border-bottom: 1px solid;
+      }
+    }
+    .primary-benefit {
+      @media (min-width: 1024px) {
+        .lg-text-x3 {
+          font-size: 2.22vw;
+        }
+      }
+    }
+  }
+  .content-slot-mid {
+    position: relative;
+    @media (max-width: 1023px) {
+      .text-slot {
+        padding-bottom: calc(100vw * 3/27);
+      }
+    }
+    @media (min-width: 1024px) {
+      .text-slot {
+        padding-bottom: calc(100vw * 10/27);
+      }
+    }
+    .show-video {
+      position: absolute;
+      background: url("../images/bg-shop1.png") no-repeat center;
+      background-size: cover;
+      cursor: pointer;
+    }
+    @media (max-width: 1023px) {
+      .show-video {
+        width: 100%;
+        height: $x19;
+        top: $x3;
+        left: 0;
+      }
+      .space-box {
+        width: $x27;
+        height: $x22;
+      }
+    }
+    @media (min-width: 1024px) {
+      .show-video {
+        width: $x17;
+        height: $x11;
+        top: $x6;
+        left: $x4;
+      }
+    }
+    .carousel-person-slot {
+      position: relative;
+      ul {
+        margin-left: $x2;
+        li {
+          width: 63vw;
+          height: 57vw;
+        }
+      }
+      div.sticky {
+        background-color: #f1d9d8;
+      }
+      @media (max-width: 1023px) {
+        ul {
+          margin-left: 0;
+          li {
+            width: 100%;
+          }
+        }
+        div.sticky {
+          width: 100%;
+          padding: $x2;
+        }
+      }
+      @media (min-width: 1024px) {
+        div.sticky {
+          position: absolute;
+          top: 12%;
+          right: 0;
+          width: $x10;
+          padding: $x1;
+        }
+      }
+    }
+  }
+  .content-slot-bottom {
+    .text-x5 {
+      font-size: calc(64px + (108 - 64) * ((100vw - 1440px) / (2560 - 1440)));
+      line-height: 1.5;
+      letter-spacing: 0.2px;
+    }
+  }
+}
