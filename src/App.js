@@ -4,9 +4,11 @@ import './assets/styles/style.scss';
 
 import Header from './components/header';
 import Footer from './components/footer';
-import Home from './pages/home';
-import Shop from './pages/shop';
-import Cart from './pages/cart';
+import Home from './pages/Home';
+import Cart from './pages/Cart';
+import TouchStableInch from './pages/TouchStableInch';
+import TouchStableSoftware from "./pages/TouchStableSoftware";
+import TouchStableEquipment from "./pages/TouchStableEquipment";
 
 function App() {
   return (
@@ -16,8 +18,14 @@ function App() {
               <Route path="/home">
                   <Home />
               </Route>
-              <Route path="/shop">
-                  <Shop />
+              <Route path="/touchstable/inches">
+                  <TouchStableInch />
+              </Route>
+              <Route path="/touchstable/software">
+                  <TouchStableSoftware />
+              </Route>
+              <Route path="/touchstable/equipment">
+                  <TouchStableEquipment />
               </Route>
               <Route path="/cart">
                   <Cart />
