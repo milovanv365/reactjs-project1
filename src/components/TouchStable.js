@@ -21,6 +21,7 @@ const TouchStable = (props) => {
     };
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         const pageName = location.pathname
         console.log(pageName)
         setPage(pageName)
@@ -42,7 +43,10 @@ const TouchStable = (props) => {
                 <div className="carousel-product-slot mv-x2 lg-mv-x1">
                     <ul className="text-align-center">
                         <li>
-                            <img src={props.brandImg} alt="" />
+                            {/*<img src={props.brandImg} alt="" />*/}
+                            <div className={isInches? "brand-img-box1" : "display-none"}></div>
+                            <div className={isSoftware? "brand-img-box2" : "display-none"}></div>
+                            <div className={isEquipment? "brand-img-box3" : "display-none"}></div>
                         </li>
                     </ul>
                 </div>
@@ -54,9 +58,9 @@ const TouchStable = (props) => {
                                 onChange={handleChange}
                                 value={page}
                             >
-                                <option value={'inches'}>45 til 86 tommer</option>
-                                <option value={'software'}>Programvare</option>
-                                <option value={'equipment'}>Leie av utstyr</option>
+                                <option value={'/touchstable/inches'}>45 til 86 tommer</option>
+                                <option value={'/touchstable/software'}>Programvare</option>
+                                <option value={'/touchstable/equipment'}>Leie av utstyr</option>
                             </select>
                         </div>
                         <nav className="xs-display-none mt-x1p25 mb-x0p5">

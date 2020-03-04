@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Grid from '@material-ui/core/Grid';
 import { Link } from "react-router-dom";
 import Button from '@material-ui/core/Button';
@@ -8,6 +8,10 @@ import contentImgThree from "../assets/images/bg-home3.jpg";
 import ProductItem from "../components/ProductItem";
 
 const Home = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    })
+
     return (
         <div className="main pa-x1">
             <div className="content-slot-top flex-vCenter">

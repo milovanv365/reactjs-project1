@@ -7,6 +7,23 @@
         img {
           width: $x6;
         }
+        .brand-img-box {
+          background-size: contain;
+          width: 20vw;
+          height: calc(20vw * 381/229);
+        }
+        .brand-img-box1 {
+          @extend .brand-img-box;
+          background-image: url('../images/touchstable-brand1.png');
+        }
+        .brand-img-box2 {
+          @extend .brand-img-box;
+          background-image: url('../images/touchstable-brand2.png');
+        }
+        .brand-img-box3 {
+          @extend .brand-img-box;
+          background-image: url('../images/touchstable-brand3.png');
+        }
       }
     }
   }
